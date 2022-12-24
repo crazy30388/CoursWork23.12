@@ -56,7 +56,7 @@ public class Main {
             for (int i =0; i< empl.length; i++){
                 if (empl[i].getSalary() < minSalary){
                     minSalary = empl[i].getSalary();
-                    minEmpl = empl[i].getFIO();
+                    minEmpl = empl[i].getName();
                 }
             }
             System.out.println("Сотрудник с минимальной зарплатой: " + minEmpl + " " + minSalary);
@@ -68,18 +68,15 @@ public class Main {
             for (int i =0; i< empl.length; i++){
                 if (empl[i].getSalary() > maxSalary){
                     maxSalary = empl[i].getSalary();
-                    maxEmpl = empl[i].getFIO();
+                    maxEmpl = empl[i].getName();
                 }
             }
             System.out.println("Сотрудник с максимальной зарплатой: " + maxEmpl + " " + maxSalary);
         }
         public static void averageSalary(Employee[] empl){
             int averageSalary = 0;
-            for (int i =0; i< empl.length; i++){
-                int salarySum=0;
-                salarySum = salarySum + empl[i].getSalary();
-                averageSalary = salarySum/10;
-                }
+                averageSalary = salarySum(empl)/empl.length;
             System.out.println("Средняя зарплата: " + averageSalary);
+                }
             }
-    }
+
